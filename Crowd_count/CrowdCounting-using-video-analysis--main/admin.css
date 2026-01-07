@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b1220;
+    color: white;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+    width: 240px;
+    background: #111a2e;
+    height: 100vh;
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 18px 0;
+    font-size: 30px;
+}
+
+.sidebar a:hover {
+    color: cyan;
+}
+
+/* ---------- MAIN ---------- */
+.main {
+    flex: 1;
+    padding: 40px;
+}
+
+.main h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+/* ---------- CARDS ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: #1c2740;
+    padding: 30px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.card h3 {
+    color: cyan;
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* ---------- CHART ---------- */
+.chart-box {
+    background: #1c2740;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+/* ---------- FORM ---------- */
+form input {
+    margin: 12px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+}
+
+form button {
+    padding: 12px 22px;
+    font-size: 18px;
+    background: cyan;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ---------- ALERT TABLE ---------- */
+.table-box {
+    margin-top: 20px;
+    background: #1c2740;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 17px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background: #111a2e;
+    color: cyan;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background: #16203a;
+}
+
+.alert-yes {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.alert-no {
+    color: #00ff99;
+    font-weight: bold;
+}
+/* ---------- USER TABLE ---------- */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: #1c2740;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.user-table th {
+    background: #111a2e;
+    color: cyan;
+}
+
+.user-table tr:nth-child(even) {
+    background: #162038;
+}
+
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.status.active {
+    background: #00c853;
+    color: black;
+}
+
+.status.inactive {
+    background: #ff5252;
+    color: black;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    background: cyan;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.action-btn:hover {
+    background: #00bcd4;
+}

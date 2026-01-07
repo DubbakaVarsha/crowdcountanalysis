@@ -1,0 +1,20 @@
+[
+    {
+        "username": "admin",
+        "role": "admin",
+        "status": "inactive",
+        "last_login": "2026-01-04 20:01:57"
+    },
+    {
+        "username": "user1",
+        "role": "user",
+        "status": "active",
+        "last_login": "2026-01-04 20:05:11"
+    },
+    {
+        "username": "user2",
+        "role": "user",
+        "status": "inactive",
+        "last_login": "Never"
+    }
+]

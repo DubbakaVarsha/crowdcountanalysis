@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "camera": "camera 1",
+        "name": "zone 1",
+        "threshold": 15,
+        "status": "active"
+    },
+    {
+        "id": 2,
+        "camera": "camera 1",
+        "name": "zone 2",
+        "threshold": 15,
+        "status": "active"
+    },
+    {
+        "id": 3,
+        "camera": "camera  1",
+        "name": "zone 3",
+        "threshold": 15,
+        "status": "active"
+    }
+]

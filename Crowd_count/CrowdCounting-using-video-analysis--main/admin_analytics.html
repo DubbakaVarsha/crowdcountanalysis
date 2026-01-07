@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Analytics</title>
+    <link rel="stylesheet" href="/static/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="/admin">Dashboard</a>
+        <a href="/admin/users">User Management</a>
+        <a href="/admin/zones">Camera Zones</a>
+        <a href="/admin/analytics" class="active">Analytics</a>
+        <a href="/admin/settings">Settings</a>
+        <a href="/dashboard">User View</a>
+        <a href="/download_csv">Export CSV</a>
+        <a href="/generate_pdf">Generate PDF</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <h1>System Analytics</h1>
+
+        <div class="chart-box">
+            <h2>Total Crowd Trend</h2>
+            <canvas id="totalChart"></canvas>
+        </div>
+
+        <div class="chart-box" style="margin-top:40px;">
+            <h2>Zone-wise Crowd Trend</h2>
+            <canvas id="zoneChart"></canvas>
+        </div>
+
+        <div class="chart-box" style="margin-top:40px;">
+            <h2>Alert Frequency</h2>
+            <canvas id="alertChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="/static/analytics.js"></script>
+</body>
+</html>

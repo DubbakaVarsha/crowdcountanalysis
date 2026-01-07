@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Crowd Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div style="display:flex; justify-content:space-between; padding:20px;">
+    <h2>🚦 Smart Crowd Monitoring Dashboard</h2>
+    <div>
+        <a href="/admin"><button>Admin Panel</button></a>
+        <a href="/logout"><button>Logout</button></a>
+    </div>
+</div>
+
+<div class="container">
+    <!-- LEFT : VIDEO -->
+    <div class="video-box">
+        <h2>Live Video</h2>
+        <img src="{{ url_for('video_feed') }}">
+    </div>
+
+    <!-- RIGHT : ANALYTICS -->
+    <div class="info-box">
+        <h2>Analytics</h2>
+        <div class="card">👥 Total Crowd: <span id="total">0</span></div>
+
+        <!-- DYNAMIC ZONE CARDS -->
+        <div id="zonesContainer"></div>
+
+        <div id="alertBox">⚠ OCCUPANCY LIMIT EXCEEDED</div>
+
+        <!-- GRAPHS -->
+        <h3>Total Crowd Trend</h3>
+        <canvas id="totalChart" height="200"></canvas>
+        <h3>Zone-wise Crowd</h3>
+        <canvas id="zoneChart" height="200"></canvas>
+        <h3>Alert History</h3>
+        <canvas id="alertChart" height="200"></canvas>
+
+        <!-- DOWNLOADS -->
+        <div class="buttons">
+            <a href="/download_csv"><button>⬇ Download CSV</button></a>
+            <a href="/generate_pdf"><button>⬇ Generate PDF</button></a>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+<script src="{{ url_for('static', filename='analytics.js') }}"></script>
+</body>
+</html>

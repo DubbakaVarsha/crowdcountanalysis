@@ -1,0 +1,7 @@
+{
+    "zone1_threshold": 15,
+    "zone2_threshold": 12,
+    "alert_enabled": true,
+    "alert_cooldown": 30,
+    "max_logs": 500
+}

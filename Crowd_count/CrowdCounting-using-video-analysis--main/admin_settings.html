@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Settings</title>
+    <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <a href="/admin">Dashboard</a>
+        <a href="/admin/users">User Management</a>
+        <a href="/admin/zones">Camera Zones</a>
+        <a href="/admin/analytics">Analytics</a>
+        <a href="/admin/settings" class="active">Settings</a>
+        <a href="/dashboard">User View</a>
+        <a href="/download_csv">Export CSV</a>
+        <a href="/generate_pdf">Generate PDF</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <h1>System Settings</h1>
+
+        <form method="POST" action="/admin/settings/update">
+            <h2>Alert Control</h2>
+            <label>
+                <input type="checkbox" name="alert_enabled" {% if config.alert_enabled %}checked{% endif %}>
+                Enable Alerts
+            </label>
+            <br><br>
+
+            <label>Alert Cooldown (seconds)</label><br>
+            <input type="number" name="alert_cooldown" value="{{ config.get('alert_cooldown', 5) }}">
+            <br><br>
+
+            <h2>System Limits</h2>
+            <label>Maximum Log Entries</label><br>
+            <input type="number" name="max_logs" value="{{ config.max_logs }}">
+            <br><br><br>
+
+            <button type="submit">Save Settings</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

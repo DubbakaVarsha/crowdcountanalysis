@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+<h2>Admin Threshold Control</h2>
+
+<form method="POST" action="/admin/update_threshold">
+    <label>Zone 1 Threshold</label><br>
+    <input type="number" name="zone1" value="{{ config.zone1_threshold }}"><br><br>
+
+    <label>Zone 2 Threshold</label><br>
+    <input type="number" name="zone2" value="{{ config.zone2_threshold }}"><br><br>
+
+    <button type="submit">Save</button>
+</form>
+
+<br>
+<a href="/dashboard">Go to Dashboard</a>
+</body>
+</html>
